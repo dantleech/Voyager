@@ -1,0 +1,40 @@
+{% extends "::base.html.twig" %}
+{% block title %}Voyager{% endblock%}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/sonatablueprint/screen.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/dtlvoyager/css/main.css') }}"/>
+{% endblock %}
+{% block body %}
+<div class="container showgrid">
+    <div id="header">
+        <div class="span-16 picture padded">
+            <h1>Dans Travel Blog</h1>
+            <h2>Paris to Morocco</h2>
+        </div>
+        <div class="span-8 last global-stats">
+            <div class="days">4 days</div>
+            <div class="miles">312miles</div>
+            <div class="kilometers">428km</div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="span-16">
+            <h3>Paris to Orleans</h3>
+            <div class="date">17th August, 2011</div>
+            <div class="distance">100 miles</div>
+            <div class="time">6 hours 12 minutes 13 seconds</div>
+            <div class="speed">14mph</div>
+            <div class="max">60mph</div>
+        </div>
+        <div class="span-8 last">
+            <ul>
+                <li>
+                    <a href="#">1. Paris &gt; Orléans</a>
+                </li>
+                <li><a href="#">2. Orléans &gt; Bourges</a></li>
+                <li><a href="#">3. Bourges &gt; Chatel Guydon</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+
+#header .miles {
+    font-size: 24px;
+}
+
+#header .picture {
+    background-image: url(../images/main.jpg);
+    height: 240px;
+    text-align: right;
+}
+
+
+#header .kilometers {
+    font-size: 18px;
+}
+
+#header .days {
+    font-size: 40px;
+}
+
+#header .global-stats {
+    text-align: center;
+}
+
+.padded {
+}
