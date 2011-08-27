@@ -1,0 +1,10 @@
+{% extends "DTLVoyagerBundle::layout.html.twig" %}
+{% block page_content %}
+    <h2>News</h2>
+    {% for post in pager %}
+        {% include "DTLVoyagerBundle:Post:_postShort.html.twig" %}
+    {% endfor %}
+    <div class="pagerfanta">
+    {{ pagerfanta(pager, 'default') }}
+    </div>
+{% endblock %}
