@@ -4,7 +4,23 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="DTLVoyagerBundle_homepage" pattern="/">
-        <default key="_controller">DTLVoyagerBundle:Default:index</default>
+    <route id="post_index" pattern="/">
+        <default key="_controller">DTLVoyagerBundle:Post:index</default>
+    </route>
+
+    <route id="post_new" pattern="/post/new">
+        <default key="_controller">DTLVoyagerBundle:Post:new</default>
+    </route>
+
+    <route id="post_view" pattern="/post/{post_id}">
+        <default key="_controller">DTLVoyagerBundle:Post:view</default>
+    </route>
+
+    <route id="post_edit" pattern="/post/{post_id}/edit">
+        <default key="_controller">DTLVoyagerBundle:Post:edit</default>
+    </route>
+
+    <route id="post_delete" pattern="/post/{post_id}/delete">
+        <default key="_controller">DTLVoyagerBundle:Post:delete</default>
     </route>
 </routes>

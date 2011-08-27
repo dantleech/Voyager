@@ -16,7 +16,7 @@ class PostType extends AbstractType
     {
         $builder->add('date');
         $builder->add('title');
-        $builder->add('content');
+        $builder->add('content', 'textarea');
     }
 }
 

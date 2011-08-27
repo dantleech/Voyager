@@ -1,6 +1,11 @@
+DTLTrainerBundle:
+    resource: "@DTLTrainerBundle/Resources/config/routing.yml"
+    prefix:   /trainer
+
 DTLVoyagerBundle:
     resource: "@DTLVoyagerBundle/Resources/config/routing.xml"
     prefix:   /
+
 
 # Internal routing configuration to handle ESI
 #_internal:

@@ -57,3 +57,19 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+fos_user:
+    db_driver:     mongodb
+    firewall_name: secured_area
+    user_class:  DTL\TrainerBundle\Document\User
+
+dtl_trainer:
+    title: Voyager
+
+doctrine_mongodb:
+    document_managers:
+        default:
+            auto_mapping:   true
+            database:       trainer
+    connections:
+        default:

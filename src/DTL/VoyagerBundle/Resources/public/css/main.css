@@ -24,3 +24,7 @@
 
 .padded {
 }
+
+label {
+    display: block;
+}
