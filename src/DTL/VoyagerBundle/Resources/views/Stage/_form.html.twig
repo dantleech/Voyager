@@ -1,0 +1,7 @@
+<form action="#new_session" method="post" {{ form_enctype(form) }}>
+    <table id="session_form" class="form">
+        {{ form_errors(form) }}
+        {{ form_rest(form) }}
+    </table>
+    <input type="submit"/>
+</form>

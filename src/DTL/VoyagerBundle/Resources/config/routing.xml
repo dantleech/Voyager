@@ -23,4 +23,44 @@
     <route id="post_delete" pattern="/post/{post_id}/delete">
         <default key="_controller">DTLVoyagerBundle:Post:delete</default>
     </route>
+
+    <route id="tour_index" pattern="/">
+        <default key="_controller">DTLVoyagerBundle:Stage:index</default>
+    </route>
+
+    <route id="tour_new" pattern="/tour/new">
+        <default key="_controller">DTLVoyagerBundle:Stage:new</default>
+    </route>
+
+    <route id="tour_view" pattern="/tour/{tour_id}">
+        <default key="_controller">DTLVoyagerBundle:Stage:view</default>
+    </route>
+
+    <route id="tour_edit" pattern="/tour/{tour_id}/edit">
+        <default key="_controller">DTLVoyagerBundle:Stage:edit</default>
+    </route>
+
+    <route id="tour_delete" pattern="/tour/{tour_id}/delete">
+        <default key="_controller">DTLVoyagerBundle:Stage:delete</default>
+    </route>
+
+    <route id="stage_index" pattern="/">
+        <default key="_controller">DTLVoyagerBundle:Stage:index</default>
+    </route>
+
+    <route id="stage_new" pattern="/stage/new">
+        <default key="_controller">DTLVoyagerBundle:Stage:new</default>
+    </route>
+
+    <route id="stage_view" pattern="/stage/{stage_id}">
+        <default key="_controller">DTLVoyagerBundle:Stage:view</default>
+    </route>
+
+    <route id="stage_edit" pattern="/stage/{stage_id}/edit">
+        <default key="_controller">DTLVoyagerBundle:Stage:edit</default>
+    </route>
+
+    <route id="stage_delete" pattern="/stage/{stage_id}/delete">
+        <default key="_controller">DTLVoyagerBundle:Stage:delete</default>
+    </route>
 </routes>

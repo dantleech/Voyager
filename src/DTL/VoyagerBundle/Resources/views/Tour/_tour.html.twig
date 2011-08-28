@@ -1,0 +1,2 @@
+<h3 class="title"><a href="{{ path('tour_view', {'tour_id': tour.getId}) }}">{{ tour.getTitle }}</a></h3>
+<p>{{ tour.getDescription|replace({"\n": "<br/>"})|raw }}</p>

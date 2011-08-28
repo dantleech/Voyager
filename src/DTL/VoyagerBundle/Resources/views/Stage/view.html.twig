@@ -1,0 +1,11 @@
+{% extends "DTLVoyagerBundle::layout.html.twig" %}
+{% block page_content %}
+<h2 class="title">{{ stage.getTitle }}</h2>
+<ul class="actions">
+    {% if is_granted('ROLE_ADMIN') %}
+        <li><a href="{{ path('stage_edit', {'stage_id': stage.getId}) }}">Edit</a></li>
+        <li><a onclick="return confirm('Are you sure?');" href="{{ path('stage_delete', {'stage_id': stage.getId}) }}">Delete</a></li>
+    {% endif %}
+</ul>
+<p>{{ stage.getDescription|replace({"\n": "<br/>"})|raw }}</p>
+{% endblock %}

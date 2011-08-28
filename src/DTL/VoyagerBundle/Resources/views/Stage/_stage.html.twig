@@ -1,0 +1,2 @@
+<h3 class="title"><a href="{{ path('stage_view', {'stage_id': stage.getId}) }}">{{ stage.getTitle }}</a></h3>
+<p>{{ stage.getDescription|replace({"\n": "<br/>"})|raw }}</p>

@@ -1,0 +1,11 @@
+{% extends "DTLVoyagerBundle::layout.html.twig" %}
+{% block page_content %}
+<h2 class="title">{{ tour.getTitle }}</h2>
+<ul class="actions">
+    {% if is_granted('ROLE_ADMIN') %}
+        <li><a href="{{ path('tour_edit', {'tour_id': tour.getId}) }}">Edit</a></li>
+        <li><a onclick="return confirm('Are you sure?');" href="{{ path('tour_delete', {'tour_id': tour.getId}) }}">Delete</a></li>
+    {% endif %}
+</ul>
+<p>{{ tour.getDescription|replace({"\n": "<br/>"})|raw }}</p>
+{% endblock %}
