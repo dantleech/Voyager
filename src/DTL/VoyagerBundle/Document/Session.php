@@ -3,12 +3,16 @@
 namespace DTL\VoyagerBundle\Document;
 
 use DTL\TrainerBundle\Document\Session as BaseSession;
+use DTL\VoyagerBundle\Log\EventInterface;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
-class Session extends BaseSession
+/**
+ * @MongoDB\Document(repositoryClass="DTL\TrainerBundle\Repository\SessionRepository")
+ */
+class Session extends BaseSession implements EventInterface
 {
-    /**
-     * @MongoDB\ReferenceOne(targetDocument="DTL\VoyagerBundle\Document\Tour")
-     */
-    protected $tour;
+    public function getType()
+    {
+        return 'Session';
+    }
 }

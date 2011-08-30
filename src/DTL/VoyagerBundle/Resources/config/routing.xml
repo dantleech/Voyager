@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="post_index" pattern="/">
+    <route id="post_index" pattern="/posts">
         <default key="_controller">DTLVoyagerBundle:Post:index</default>
     </route>
 
@@ -24,27 +24,27 @@
         <default key="_controller">DTLVoyagerBundle:Post:delete</default>
     </route>
 
-    <route id="tour_index" pattern="/">
-        <default key="_controller">DTLVoyagerBundle:Stage:index</default>
+    <route id="tour_index" pattern="/tours">
+        <default key="_controller">DTLVoyagerBundle:Tour:index</default>
     </route>
 
     <route id="tour_new" pattern="/tour/new">
-        <default key="_controller">DTLVoyagerBundle:Stage:new</default>
+        <default key="_controller">DTLVoyagerBundle:Tour:new</default>
     </route>
 
     <route id="tour_view" pattern="/tour/{tour_id}">
-        <default key="_controller">DTLVoyagerBundle:Stage:view</default>
+        <default key="_controller">DTLVoyagerBundle:Tour:view</default>
     </route>
 
     <route id="tour_edit" pattern="/tour/{tour_id}/edit">
-        <default key="_controller">DTLVoyagerBundle:Stage:edit</default>
+        <default key="_controller">DTLVoyagerBundle:Tour:edit</default>
     </route>
 
     <route id="tour_delete" pattern="/tour/{tour_id}/delete">
-        <default key="_controller">DTLVoyagerBundle:Stage:delete</default>
+        <default key="_controller">DTLVoyagerBundle:Tour:delete</default>
     </route>
 
-    <route id="stage_index" pattern="/">
+    <route id="stage_index" pattern="/stages">
         <default key="_controller">DTLVoyagerBundle:Stage:index</default>
     </route>
 
@@ -62,5 +62,9 @@
 
     <route id="stage_delete" pattern="/stage/{stage_id}/delete">
         <default key="_controller">DTLVoyagerBundle:Stage:delete</default>
+    </route>
+
+    <route id="log_index" pattern="/">
+        <default key="_controller">DTLVoyagerBundle:Log:index</default>
     </route>
 </routes>

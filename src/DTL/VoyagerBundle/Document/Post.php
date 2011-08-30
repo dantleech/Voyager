@@ -2,11 +2,12 @@
 
 namespace DTL\VoyagerBundle\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use DTL\VoyagerBundle\Log\EventInterface;
 
 /**
  * @MongoDB\Document()
  */
-class Post
+class Post implements EventInterface
 {
     /**
      * @MongoDB\Id
@@ -96,5 +97,10 @@ class Post
     public function getContent()
     {
         return $this->content;
+    }
+
+    public function getType()
+    {
+        return 'Blog';
     }
 }

@@ -1,0 +1,14 @@
+    <div id="header" class="span-24">
+        <div class="span-16 picture">
+            <div class="padded">
+                <h1>Dans Travel Blog</h1>
+                <h2>{{ tour.getTitle }}</h2>
+            </div>
+        </div>
+        <div class="span-8 last global-stats">
+            <div class="days">{{ stats.days }} days</div>
+            <div class="miles">{{ format_meters(stats.meters, 'm') }} miles ({{ format_meters(stats.meters, 'km') }}km)</div>
+            <div class="time">{{ format_seconds(stats.seconds) }} (hh:mm:ss)</div>
+        </div>
+    </div>
+

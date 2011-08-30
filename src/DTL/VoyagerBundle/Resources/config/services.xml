@@ -8,13 +8,11 @@
     <parameters>
         <parameter key="dtl_voyager.example.class">DTL\VoyagerBundle\Example</parameter>
     </parameters>
+    -->
 
     <services>
-        <service id="dtl_voyager.example" class="%dtl_voyager.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="dtl_voyager.log_builder" class="DTL\VoyagerBundle\Log\Builder">
+            <argument type="service" id="doctrine.odm.mongodb.document_manager" />
         </service>
     </services>
-    -->
 </container>

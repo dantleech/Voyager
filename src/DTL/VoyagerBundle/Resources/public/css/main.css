@@ -1,3 +1,24 @@
+body {
+    background-color: #111111;
+}
+
+#main {
+    border-top-style: solid;
+    border-width: 4px;
+    border-color: #aaaaaa;
+}
+
+.container {
+    background-color: #fff;
+}
+
+#header {
+    border-bottom-style: solid;
+    border-width: 2px;
+    background-color: #444444;
+    color: #cccccc;
+    border-color: #000000;
+}
 
 #header .miles {
     font-size: 24px;
@@ -20,6 +41,7 @@
 
 #header .global-stats {
     text-align: center;
+    text-shadow: 2px 2px 2px #000;
 }
 
 .padded {
@@ -27,4 +49,81 @@
 
 label {
     display: block;
+}
+
+
+.day {
+}
+
+.day h3 {
+    background-color: #444444;
+    color: #dddddd;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+.day .session {
+    background-color: #aaaaff;
+}
+
+.day .session h4.event-type {
+    color: #7777cc;
+    font-size: 22px;
+}
+
+h4.event-title {
+    font-size: 22px;
+    margin: 0px;
+    font-family: serif;
+}
+
+.session table {
+    border-collapse: collapse;
+}
+
+.session table tr th {
+    background-color: orange;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.session table tr td {
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.day .blog {
+    background-color: #aaffaa;
+}
+
+.day .blog h4.event-type {
+    color: #77cc77;
+    font-size: 22px;
+}
+
+.rounded-top {
+/**   -webkit-border-top-right-radius: 10px;
+   -moz-border-radius-topright: 10px;
+   border-top-right-radius: 10px;
+*/
+}
+
+.padded {
+    padding: 5px;
+}
+
+.padded-vertically {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.event-type {
+    font-size: 30px;
+    overflow: hidden;
+}
+
+ul.session-list {
+    list-style: none;
+    padding: 0px;
 }

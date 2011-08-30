@@ -1,0 +1,23 @@
+{% extends "DTLVoyagerBundle::layoutFull.html.twig" %}
+{% block page_content %}
+    {% for stage in stages %}
+        <h2>{{ stage.getTitle }} {{ stage.getStartDate.format('Y-m-d') }} to 
+        {% if stage.getEndDate %}
+            {{ stage.getEndDate.format('Y-m-d') }}
+        {% else %}
+            now
+        {% endif %}
+        </h2>
+        {% for day in stage.getDays %}
+            <div class="span-16">
+                <div class="day rounded-top" id="date-{{ day.getDate.format('Y-m-d') }}">
+                    <h3 class="rounded-top">{{ day.getDate.format('Y-m-d') }}</h3>
+                    {% for event in day.getEvents() %}
+                        {% include "DTLVoyagerBundle:Log:_" ~ event.getType|lower ~ ".html.twig" %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+

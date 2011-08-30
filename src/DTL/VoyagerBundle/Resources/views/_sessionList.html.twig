@@ -1,0 +1,11 @@
+<h2>Trips</h2>
+<ul class="session-list">
+    {% for session in sessions %}
+        <li>
+            <a href="{{ path('log_index') }}#date-{{ session.getDate().format('Y-m-d') }}">
+            <small>{{ session.getDate.format('Y-m-d') }}</small> {{ session.getTitle }} 
+            <small>{{ format_meters(session.getDistance(), 'm') }} miles ({{ format_meters(session.getDistance(), 'km') }}km)</small>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

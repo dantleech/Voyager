@@ -1,0 +1,18 @@
+<div class="session span-16">
+    <div class="span-2">
+        <h4 class="event-type padded">{{ event.getActivity }}</h4>
+    </div>
+    <div class="span-14 last">
+        <h4 class="event-title padded-vertically">{{ event.getTitle }}</h4>
+        <table class="padded-vertically">
+            <tr>
+                <th>Distance</th>
+                <td>{{ format_meters(event.getDistance()) }}</td>
+                <th>Time</th>
+                <td>{{ format_seconds(event.getTime()) }}</td>
+                <th>Speed</th>
+                <td>{{ format_average_speed(event.getTime, event.getDistance) }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

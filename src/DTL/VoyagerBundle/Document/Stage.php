@@ -4,7 +4,7 @@ namespace DTL\VoyagerBundle\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
- * @MongoDB\Document()
+ * @MongoDB\Document(repositoryClass="DTL\VoyagerBundle\Repository\StageRepository")
  */
 class Stage
 {
@@ -32,6 +32,14 @@ class Stage
      * @MongoDB\Date
      */
     protected $startDate;
+
+    /**
+     * Not persisted, calculated at runtime based
+     * on next stage
+     */
+    protected $endDate;
+
+    protected $days;
 
     /**
      * Get id
@@ -113,4 +121,23 @@ class Stage
         return $this->tour;
     }
 
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+    }
+
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
+
+    public function getDays()
+    {
+        return $this->days;
+    }
+
+    public function setDays($days)
+    {
+        $this->days = $days;
+    }
 }

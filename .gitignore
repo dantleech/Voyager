@@ -4,4 +4,6 @@
 /app/logs/*
 /vendor/
 /app/config/parameters.ini
+/src/DTL/TrainerBundle
+/dump
 

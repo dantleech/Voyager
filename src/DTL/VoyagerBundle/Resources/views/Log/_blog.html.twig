@@ -1,0 +1,13 @@
+<div class="blog span-16">
+    <div class="span-2">
+        <h4 class="event-type padded">
+            {{ event.getType }}
+        </h4>
+    </div>
+    <div class="span-14 last">
+        <h4 class="padded-vertically event-title">{{ event.getTitle }}</h4>
+        <div class="padded-vertically">
+            {{ event.getContent|replace({"\n": "<br/>"})|raw }}
+        </div>
+    </div>
+</div>
