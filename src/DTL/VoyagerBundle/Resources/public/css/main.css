@@ -2,10 +2,17 @@ body {
     background-color: #111111;
 }
 
+#main h2 {
+    font-size: 28px;
+    color: #444444;
+    font-family: serif;
+}
+
 #main {
     border-top-style: solid;
     border-width: 4px;
     border-color: #aaaaaa;
+    border-color: #cc0000;
 }
 
 .container {
@@ -56,10 +63,13 @@ label {
 }
 
 .day h3 {
-    background-color: #444444;
-    color: #dddddd;
+    background-color: #dddddd;
+    color: #444;
     padding: 5px;
     margin-bottom: 0px;
+    border-bottom-style: solid;
+    border-width: 4px;
+    border-color: #444;
 }
 
 .day .session {
