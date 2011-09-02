@@ -92,3 +92,6 @@
 [WhiteOctoberPagerfantaBundle]
     git=http://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git
     target=/bundles/WhiteOctober/PagerfantaBundle
+
+[imagine]
+    git=http://github.com/avalanche123/Imagine.git

@@ -40,7 +40,8 @@ class Builder
     {
         $events = array_merge(
             $this->getSessions($stage->getStartDate(), $stage->getEndDate()),
-            $this->getPosts($stage)
+            $this->getPosts($stage),
+            $this->getMedias($stage)
         );
 
         $days = array();
@@ -51,8 +52,13 @@ class Builder
                 $day->setDate($event->getDate());
                 $days[$event->getDate()->format('Ymd')] = $day;
             }
-            $days[$event->getDate()->format('Ymd')]->addEvent($event);
+                if ($event->getType() == 'Media') {
+                    $days[$event->getDate()->format('Ymd')]->addMedia($event);
+                } else {
+                    $days[$event->getDate()->format('Ymd')]->addEvent($event);
+                }
         }
+
 
         $days = DocumentUtil::sortDocuments($days, 'getDate');
 
@@ -125,5 +131,18 @@ class Builder
 
         $posts = $qb->getQuery()->execute()->toArray();
         return $posts;
+    }
+
+    public function getMedias($stage)
+    {
+        $qb = $this->dm->getRepository('DTLVoyagerBundle:Media')->createQueryBuilder();
+        $qb->field('date')->gte($stage->getStartDate());
+        $qb->sort('date');
+        if ($stage->getEndDate()) {
+            $qb->field('date')->lte($stage->getEndDate());
+        }
+
+        $medias = $qb->getQuery()->execute()->toArray();
+        return $medias;
     }
 }

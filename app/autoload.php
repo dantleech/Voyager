@@ -17,6 +17,7 @@ $loader->registerNamespaces(array(
     'Doctrine\\MongoDB'             => __DIR__.'/../vendor/doctrine-mongodb/lib',
     'Doctrine\\ODM\\MongoDB'        => __DIR__.'/../vendor/doctrine-mongodb-odm/lib',
     'Doctrine'         => __DIR__.'/../vendor/doctrine/lib',
+    'Imagine'       => __DIR__.'/../vendor/Imagine/lib',
     'Pagerfanta'       => __DIR__.'/../vendor/Pagerfanta/src',
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
     'Assetic'          => __DIR__.'/../vendor/assetic/src',

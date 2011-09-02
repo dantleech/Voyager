@@ -15,6 +15,9 @@
                     {% for event in day.getEvents() %}
                         {% include "DTLVoyagerBundle:Log:_" ~ event.getType|lower ~ ".html.twig" %}
                     {% endfor %}
+                    {% if day.getMedias %}
+                        {% include "DTLVoyagerBundle:Log:_media.html.twig" %}
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

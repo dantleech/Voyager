@@ -24,11 +24,8 @@ security:
             security: false
 
         secured_area:
-            pattern:    ^/
+            pattern:    ^/*+
             anonymous: ~
             http_basic:
                 realm: "Trainer"
                 provider: fos_userbundle
-
-    access_control:
-        - { path: ^/, roles: ROLE_USER }

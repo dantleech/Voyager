@@ -1,0 +1,15 @@
+<div class="media span-16">
+    <div class="span-2">
+        <h4 class="event-type padded">
+            Media
+        </h4>
+    </div>
+    <div class="span-14 last">
+        {% for media in day.getMedias %}
+            <div style="float: left">
+            <img src="{{ asset('media/thumb/' ~ media.getFilename()) }}"/>
+            <br/>{{ media.getDate.format('H:m') }}
+            </div>
+        {% endfor %}
+    </div>
+</div>

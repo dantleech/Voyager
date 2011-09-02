@@ -6,6 +6,7 @@ class Day
 {
     protected $date;
     protected $events = array();
+    protected $medias = array();
 
     public function getDate()
     {
@@ -25,5 +26,20 @@ class Day
     public function getEvents()
     {
         return $this->events;
+    }
+
+    public function setMedias($medias)
+    {
+        $this->medias = $medias;
+    }
+
+    public function getMedias()
+    {
+        return $this->medias;
+    }
+
+    public function addMedia($media)
+    {
+        $this->medias[] = $media;
     }
 }

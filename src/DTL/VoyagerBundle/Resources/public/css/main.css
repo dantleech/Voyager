@@ -112,6 +112,15 @@ h4.event-title {
     font-size: 22px;
 }
 
+.day .media {
+    background-color: #eeeeee;
+}
+
+.day .media h4.event-type {
+    color: #aaaaaa;
+    font-size: 22px;
+}
+
 .rounded-top {
 /**   -webkit-border-top-right-radius: 10px;
    -moz-border-radius-topright: 10px;

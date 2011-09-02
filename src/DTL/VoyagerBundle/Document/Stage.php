@@ -2,6 +2,7 @@
 
 namespace DTL\VoyagerBundle\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use DTL\TrainerBundle\Util\DocumentUtil;
 
 /**
  * @MongoDB\Document(repositoryClass="DTL\VoyagerBundle\Repository\StageRepository")
@@ -98,6 +99,8 @@ class Stage
 
     public function getStartDate()
     {
+        // normalize start date
+        $this->startDate->modify('midnight');
         return $this->startDate;
     }
     
@@ -128,12 +131,17 @@ class Stage
 
     public function getEndDate()
     {
+        if ($this->endDate) {
+            $this->endDate->modify('midnight');
+        }
         return $this->endDate;
     }
 
-    public function getDays()
+    public function getDays($sort)
     {
-        return $this->days;
+        $days = $this->days;
+        $days = DocumentUtil::sortDocuments($days, 'getDate', 'desc');
+        return $days;
     }
 
     public function setDays($days)
